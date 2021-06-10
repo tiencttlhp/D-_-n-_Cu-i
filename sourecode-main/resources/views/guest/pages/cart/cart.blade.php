@@ -117,7 +117,7 @@
     															<a class="button-continue-shopping button primary is-outline"  href="{{ route('getHome') }}">&#8592; Tiếp tục xem sản phẩm</a>
 															</div>
 															<input type="hidden" name="_token" value="{{ csrf_token() }}">
-          													<button type="submit" class="button primary mt-0 pull-left small" name="update_cart" value="Cập nhật giỏ hàng">Cập nhật giỏ hàng</button>
+          													<button onclick="loat()" type="submit" class="button primary mt-0 pull-left small" name="update_cart" value="Cập nhật giỏ hàng">Cập nhật giỏ hàng</button>
           													<input type="hidden" id="_wpnonce" name="_wpnonce" value="263b818ada" /><input type="hidden" name="_wp_http_referer" />        
           												</td>
       												</tr>
@@ -256,5 +256,10 @@
 				$('#form-checkout').submit();
 			}
 		});											
+	</script>
+	<script>
+		function loat(){
+			location.reload();
+		}
 	</script>
 @endsection

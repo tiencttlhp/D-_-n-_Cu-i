@@ -23,7 +23,7 @@
 						<table class="table datatable-multi-sorting">
 							<thead>
 								<tr>
-									<th width="5%">ID</th>
+									<th width="5%">STT</th>
 									<th width="10%">Logo</th>
 									<th width="40%">Tiêu Đề</th>
 									<th width="15%">Ngày Đăng</th>
@@ -33,10 +33,12 @@
 							</thead>
 							<tbody>
 								@if (count($news)>0)
-								
+								<?php
+								$a=1;
+								?>
 								@foreach ($news as $element)
 								<tr>
-									<td>{{ $element->id }}</td>
+									<td>{{ $a }}</td>
 									<td><img src="{{ asset($element->logo) }}" width="50px"></td>
 									<td>{{ $element->title }}</td>
 									<td>{{ $element->postDate }}</td>
@@ -57,6 +59,9 @@
 										</ul>
 									</td>
 								</tr>
+								<?php
+								$a=$a+1;
+								?>
 								@endforeach
 								@endif
 							</tbody>

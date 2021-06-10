@@ -107,14 +107,16 @@ class CommentController extends Controller
     public function getProductComment($id)
     {
         $product=Product::find($id);    
-        $listComment=$product->getListComment();       
+        $listComment=$product->getListComment();  
+               
         return view('employee.pages.listComment',['listComment'=>$listComment,'name'=>$product->productName]);
     }
 
     public function getNewComment($id)
     {
         $news=News::find($id);
-        $listComment=$news->getListComment();       
+        $listComment=$news->getListComment();  
+        
         return view('employee.pages.new.listComment',['listComment'=>$listComment,'name'=>$news->title,'newid'=>$news->id]);
     }
 

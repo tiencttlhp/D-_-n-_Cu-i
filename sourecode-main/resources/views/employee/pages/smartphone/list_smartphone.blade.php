@@ -23,7 +23,7 @@
 						<table class="table datatable-multi-sorting">
 							<thead>
 								<tr>
-									<th width="5%">ID</th>
+									<th width="5%">STT</th>
 									<th width="10%">Ảnh</th>
 									<th width="40%">Tên Điện Thoại</th>
 									<th width="15%">Giá Mua</th>
@@ -33,10 +33,12 @@
 							</thead>
 							<tbody>
 								@if (count($list)>0)
-								
+								<?php
+								$a=1;
+								?>
 								@foreach ($list as $element)
 								<tr>
-									<td>{{ $element->id }}</td>
+									<td>{{ $a}}</td>
 									<td><img src="{{ asset($element->isProduct->imagesurl) }}" width="50px"></td>
 									<td>{{ $element->isProduct->productName }}</td>
 									<td>{{ $element->isProduct->purchase }} VND</td>
@@ -57,6 +59,9 @@
 										</ul>
 									</td>
 								</tr>
+								<?php
+								$a=$a+1;
+								?>
 								@endforeach
 								@endif
 							</tbody>

@@ -143,7 +143,7 @@
                                             <div style="display: flex">
                                                 <input type="text" name="history"  style="height: 44px">
                                                 <div class="flex-col" style="height: 30px;margin-top: 1.5px;">
-                                                    <button onclick="myFunction()" type="submit" class="ux-search-submit submit-button secondary button icon mb-0">
+                                                    <button  type="submit" class="ux-search-submit submit-button secondary button icon mb-0">
                                                         <i class="icon-search"></i> </button>
                                                 </div>
                                             </div>

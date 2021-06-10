@@ -35,7 +35,7 @@
 							<tbody>
 								@if (count($list)>0)
 								<?php
-									$a=0;
+									$a=1;
 									?>
 								@foreach ($list as $element)
 								<tr>
